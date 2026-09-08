@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>FC Integration Cross-Training — Pre-Training Questionnaire</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="masthead">
+  <p class="eyebrow">SAP Internal · FC Integration Cross-Training</p>
+  <h1>Pre-Training Questionnaire</h1>
+  <p class="meta-line">Takes about 10 minutes · For the FC cross-training cohort</p>
+</header>
+
+<main>
+  <div class="intro">
+    <p class="privacy-note"><strong>Your individual answers go only to Abe</strong> — not your manager, not the Integration Services team. Anything reported upward is cohort-level only.</p>
+    <p>This questionnaire calibrates the training — it is not an evaluation of you. Candid answers are the most useful kind: if something below is completely unfamiliar, saying so directly means the sessions get built at the right depth instead of assuming knowledge nobody has. The confidence questions get re-asked about 60 days after training to measure the <em>program</em>, not you.</p>
+  </div>
+
+  <div id="restore-banner" class="restore-banner" hidden>
+    <p>Welcome back — your earlier draft was restored, nothing was lost.</p>
+    <button type="button" id="start-fresh" class="link-button">Start fresh instead</button>
+  </div>
+
+  <noscript>
+    <p class="noscript-note">JavaScript is off in your browser, so draft autosave and inline error checks won't run — but every question is still here and the form still submits normally. If anything misbehaves, just email your answers to <a href="mailto:idabbouseh@gmail.com">Abe</a>.</p>
+  </noscript>
+
+  <form id="qform" action="https://formspree.io/f/mdeoplby" method="POST">
+    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="gotcha">
+    <input type="hidden" name="_subject" id="subject-field" value="FC Pre-Training Questionnaire">
+
+    <!-- ============ Section A ============ -->
+    <section aria-labelledby="sec-a">
+      <div class="section-head">
+        <span class="section-letter" aria-hidden="true">A</span>
+        <h2 id="sec-a">Background</h2>
+      </div>
+
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">A1</span> About you</legend>
+          <div class="field-row">
+            <div class="field">
+              <label for="a1-name">Name <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="a1-name" name="A1_Name" autocomplete="name" required data-req>
+            </div>
+            <div class="field">
+              <label for="a1-role">Current role <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="a1-role" name="A1_Role" placeholder="e.g., Senior Functional Consultant" required data-req>
+            </div>
+          </div>
+          <div class="subfield" role="radiogroup" aria-labelledby="a1-years-label">
+            <p class="sublabel" id="a1-years-label">Years working with SAP Fieldglass <span class="req" aria-hidden="true">*</span></p>
+            <div class="choice-row" data-req-group="A1_YearsFieldglass">
+              <label class="chip"><input type="radio" name="A1_YearsFieldglass" required value="Under 2"><span>Under 2</span></label>
+              <label class="chip"><input type="radio" name="A1_YearsFieldglass" required value="2–5"><span>2–5</span></label>
+              <label class="chip"><input type="radio" name="A1_YearsFieldglass" required value="5–10"><span>5–10</span></label>
+              <label class="chip"><input type="radio" name="A1_YearsFieldglass" required value="10+"><span>10+</span></label>
+            </div>
+          </div>
+          <p class="error-msg" hidden></p>
+        </fieldset>
+      </div>
+
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">A2</span> Which Fieldglass modules do you primarily work in? <span class="hint-inline">(select all that apply)</span> <span class="req" aria-hidden="true">*</span><span class="sr-only"> (required — select at least one)</span></legend>
+          <div class="choice-stack" data-req-group="A2_Modules">
+            <label class="chip"><input type="checkbox" name="A2_Modules" value="Contingent Workforce"><span>Contingent Workforce</span></label>
+            <label class="chip"><input type="checkbox" name="A2_Modules" value="SOW / Services"><span>SOW / Services</span></label>
+            <label class="chip"><input type="checkbox" name="A2_Modules" value="Profile Worker"><span>Profile Worker</span></label>
+            <label class="chip"><input type="checkbox" name="A2_Modules" value="Assignment Management"><span>Assignment Management</span></label>
+            <label class="chip"><input type="checkbox" name="A2_Modules" value="Other"><span>Other</span></label>
+          </div>
+          <div class="field followup">
+            <label for="a2-other">Other module — which?</label>
+            <input type="text" id="a2-other" name="A2_Modules_Other">
+          </div>
+          <p class="error-msg" hidden></p>
+        </fieldset>
+      </div>
+
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">A3</span> Roughly how many hours per week can you realistically commit to live sessions plus practice exercises while the program is running? <span class="req" aria-hidden="true">*</span></legend>
+          <p class="hint">Final program length is being confirmed — answer per week.</p>
+          <div class="choice-row" data-req-group="A3_HoursPerWeek">
+            <label class="chip"><input type="radio" name="A3_HoursPerWeek" required value="Under 2"><span>Under 2</span></label>
+            <label class="chip"><input type="radio" name="A3_HoursPerWeek" required value="2–3"><span>2–3</span></label>
+            <label class="chip"><input type="radio" name="A3_HoursPerWeek" required value="4–5"><span>4–5</span></label>
+            <label class="chip"><input type="radio" name="A3_HoursPerWeek" required value="6 or more"><span>6 or more</span></label>
+          </div>
+          <p class="error-msg" hidden></p>
+        </fieldset>
+      </div>
+    </section>
+
+    <!-- ============ Section B ============ -->
+    <section aria-labelledby="sec-b">
+      <div class="section-head">
+        <span class="section-letter" aria-hidden="true">B</span>
+        <h2 id="sec-b">Current integration exposure</h2>
+      </div>
+
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">B1</span> Have you ever opened the Integration area of Configuration Manager? <span class="req" aria-hidden="true">*</span></legend>
+          <div class="choice-row" data-req-group="B1_ConfigManagerIntegrationArea">
+            <label class="chip"><input type="radio" name="B1_ConfigManagerIntegrationArea" required value="Never"><span>Never</span></label>
+            <label class="chip"><input type="radio" name="B1_ConfigManagerIntegrationArea" required value="Browsed it"><span>Browsed it</span></label>
+            <label class="chip"><input type="radio" name="B1_ConfigManagerIntegrationArea" required value="Made changes in it"><span>Made changes in it</span></label>
+          </div>
+          <p class="error-msg" hidden></p>
+        </fieldset>
+      </div>
+
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">B2</span> Have you ever reviewed integration run results or error messages on a client project? <span class="req" aria-hidden="true">*</span></legend>
+          <div class="choice-row" data-req-group="B2_RunResults">
+            <label class="chip"><input type="radio" name="B2_RunResults" required value="Never"><span>Never</span></label>
+            <label class="chip"><input type="radio" name="B2_RunResults" required value="Once or twice"><span>Once or twice</span></label>
+            <label class="chip"><input type="radio" name="B2_RunResults" required value="Several times"><span>Several times</span></label>
+            <label class="chip"><input type="radio" name="B2_RunResults" required value="Regularly"><span>Regularly</span></label>
+          </div>
+          <p class="error-msg" hidden></p>
+        </fieldset>
+      </div>
+
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">B3</span> Have you ever manually uploaded a data file into Fieldglass (test or production)? <span class="req" aria-hidden="true">*</span></legend>
+          <div class="choice-row" data-req-group="B3_ManualUpload">
+            <label class="chip"><input type="radio" name="B3_ManualUpload" required value="No"><span>No</span></label>
+            <label class="chip"><input type="radio" name="B3_ManualUpload" required value="Yes"><span>Yes</span></label>
+          </div>
+          <div class="field followup">
+            <label for="b3-kind">If yes — what kind of file?</label>
+            <input type="text" id="b3-kind" name="B3_FileKind" placeholder="e.g., cost centers, users">
+          </div>
+          <p class="error-msg" hidden></p>
+        </fieldset>
+      </div>
+
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">B4</span> On projects, how have you been involved with integrations? <span class="hint-inline">(select all that apply)</span> <span class="req" aria-hidden="true">*</span><span class="sr-only"> (required — select at least one)</span></legend>
+          <div class="choice-stack" data-req-group="B4_Involvement" id="b4-group">
+            <label class="chip"><input type="checkbox" name="B4_Involvement" value="Collected master data from the client"><span>Collected master data from the client</span></label>
+            <label class="chip"><input type="checkbox" name="B4_Involvement" value="Reviewed a mapping or spec document"><span>Reviewed a mapping or spec document</span></label>
+            <label class="chip"><input type="checkbox" name="B4_Involvement" value="Attended integration design workshops"><span>Attended integration design workshops</span></label>
+            <label class="chip"><input type="checkbox" name="B4_Involvement" value="Handed requirements to Integration Services"><span>Handed requirements to Integration Services</span></label>
+            <label class="chip"><input type="checkbox" name="B4_Involvement" value="Tested integrated data in the tenant"><span>Tested integrated data in the tenant</span></label>
+            <label class="chip"><input type="checkbox" name="B4_Involvement" value="Reviewed or worked with an outbound file or extract from Fieldglass"><span>Reviewed or worked with an outbound file or extract from Fieldglass <small>(e.g., an invoice or work order download sent to a client system)</small></span></label>
+            <label class="chip chip-none"><input type="checkbox" name="B4_Involvement" value="None of these" data-none><span>None of these</span></label>
+          </div>
+          <p class="error-msg" hidden></p>
+        </fieldset>
+      </div>
+
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">B5</span> Any integration or data work outside Fieldglass — prior roles, other tools, ERP background, XML experience? <span class="optional-tag">Optional</span></legend>
+          <textarea id="b5-outside" name="B5_OutsideExperience" rows="3" placeholder="e.g., SuccessFactors data migrations, SQL reporting, EDI at a prior employer"></textarea>
+          <label class="chip chip-inline"><input type="checkbox" name="B5_None" value="No prior integration or data work" data-clears="b5-outside"><span>No prior integration or data work</span></label>
+        </fieldset>
+      </div>
+
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">B6</span> Have you ever been involved in SSO setup for a Fieldglass client (SAML configuration, IdP coordination, user-ID mapping)? <span class="req" aria-hidden="true">*</span></legend>
+          <div class="choice-row" data-req-group="B6_SSOExposure">
+            <label class="chip"><input type="radio" name="B6_SSOExposure" required value="Never"><span>Never</span></label>
+            <label class="chip"><input type="radio" name="B6_SSOExposure" required value="Observed or coordinated it"><span>Observed or coordinated it</span></label>
+            <label class="chip"><input type="radio" name="B6_SSOExposure" required value="Configured it myself"><span>Configured it myself</span></label>
+          </div>
+          <p class="error-msg" hidden></p>
+        </fieldset>
+      </div>
+    </section>
+
+    <!-- ============ Section C ============ -->
+    <!-- NOTE: C1–C5 and C7 are part of the frozen +60-day re-survey battery.
+         Do not change their wording, order, anchors, or format without
+         accepting that the before/after comparison breaks. See docs/. -->
+    <section aria-labelledby="sec-c">
+      <div class="section-head">
+        <span class="section-letter" aria-hidden="true">C</span>
+        <h2 id="sec-c">Technical comfort</h2>
+      </div>
+      <p class="section-note">Rate each item on what you could actually do today. There are no wrong answers — low scores just tell us where to slow down. <span class="privacy-reminder">Reminder: individual answers go only to Abe.</span></p>
+      <div id="scale-c">
+      <!-- FROZEN +60-day battery item — do not reword. See docs/. -->
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">C1</span> Opening, editing, and correctly saving CSV / delimited files <span class="req" aria-hidden="true">*</span><span class="sr-only"> (required)</span></legend>
+          <div class="scale-options" data-req-group="C1_CSVFiles">
+          <label class="scale-chip"><input type="radio" name="C1_CSVFiles" value="1 — Never seen or done this" aria-label="1 — Never seen or done this" required><span class="scale-num" aria-hidden="true">1</span><span class="scale-word" aria-hidden="true">Never seen</span></label>
+          <label class="scale-chip"><input type="radio" name="C1_CSVFiles" value="2 — Seen it, wouldn&#39;t attempt alone" aria-label="2 — Seen it, wouldn&#39;t attempt alone" required><span class="scale-num" aria-hidden="true">2</span><span class="scale-word" aria-hidden="true">Seen it</span></label>
+          <label class="scale-chip"><input type="radio" name="C1_CSVFiles" value="3 — Could do with step-by-step guidance" aria-label="3 — Could do with step-by-step guidance" required><span class="scale-num" aria-hidden="true">3</span><span class="scale-word" aria-hidden="true">Step-by-step</span></label>
+          <label class="scale-chip"><input type="radio" name="C1_CSVFiles" value="4 — Could do with occasional help" aria-label="4 — Could do with occasional help" required><span class="scale-num" aria-hidden="true">4</span><span class="scale-word" aria-hidden="true">Occasional help</span></label>
+          <label class="scale-chip"><input type="radio" name="C1_CSVFiles" value="5 — Could do independently and explain it" aria-label="5 — Could do independently and explain it" required><span class="scale-num" aria-hidden="true">5</span><span class="scale-word" aria-hidden="true">Independently</span></label>
+          </div>
+          <p class="error-msg" hidden></p>
+        </fieldset>
+      </div>
+
+      <!-- FROZEN +60-day battery item — do not reword. See docs/. -->
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">C2</span> Excel data cleanup — formulas, text functions, find and replace <span class="req" aria-hidden="true">*</span><span class="sr-only"> (required)</span></legend>
+          <div class="scale-options" data-req-group="C2_ExcelCleanup">
+          <label class="scale-chip"><input type="radio" name="C2_ExcelCleanup" value="1 — Never seen or done this" aria-label="1 — Never seen or done this" required><span class="scale-num" aria-hidden="true">1</span><span class="scale-word" aria-hidden="true">Never seen</span></label>
+          <label class="scale-chip"><input type="radio" name="C2_ExcelCleanup" value="2 — Seen it, wouldn&#39;t attempt alone" aria-label="2 — Seen it, wouldn&#39;t attempt alone" required><span class="scale-num" aria-hidden="true">2</span><span class="scale-word" aria-hidden="true">Seen it</span></label>
+          <label class="scale-chip"><input type="radio" name="C2_ExcelCleanup" value="3 — Could do with step-by-step guidance" aria-label="3 — Could do with step-by-step guidance" required><span class="scale-num" aria-hidden="true">3</span><span class="scale-word" aria-hidden="true">Step-by-step</span></label>
+          <label class="scale-chip"><input type="radio" name="C2_ExcelCleanup" value="4 — Could do with occasional help" aria-label="4 — Could do with occasional help" required><span class="scale-num" aria-hidden="true">4</span><span class="scale-word" aria-hidden="true">Occasional help</span></label>
+          <label class="scale-chip"><input type="radio" name="C2_ExcelCleanup" value="5 — Could do independently and explain it" aria-label="5 — Could do independently and explain it" required><span class="scale-num" aria-hidden="true">5</span><span class="scale-word" aria-hidden="true">Independently</span></label>
+          </div>
+          <p class="error-msg" hidden></p>
+        </fieldset>
+      </div>
+
+      <!-- FROZEN +60-day battery item — do not reword. See docs/. -->
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">C3</span> Data types and formats — dates, numbers, field lengths <span class="req" aria-hidden="true">*</span><span class="sr-only"> (required)</span></legend>
+          <div class="scale-options" data-req-group="C3_DataTypes">
+          <label class="scale-chip"><input type="radio" name="C3_DataTypes" value="1 — Never seen or done this" aria-label="1 — Never seen or done this" required><span class="scale-num" aria-hidden="true">1</span><span class="scale-word" aria-hidden="true">Never seen</span></label>
+          <label class="scale-chip"><input type="radio" name="C3_DataTypes" value="2 — Seen it, wouldn&#39;t attempt alone" aria-label="2 — Seen it, wouldn&#39;t attempt alone" required><span class="scale-num" aria-hidden="true">2</span><span class="scale-word" aria-hidden="true">Seen it</span></label>
+          <label class="scale-chip"><input type="radio" name="C3_DataTypes" value="3 — Could do with step-by-step guidance" aria-label="3 — Could do with step-by-step guidance" required><span class="scale-num" aria-hidden="true">3</span><span class="scale-word" aria-hidden="true">Step-by-step</span></label>
+          <label class="scale-chip"><input type="radio" name="C3_DataTypes" value="4 — Could do with occasional help" aria-label="4 — Could do with occasional help" required><span class="scale-num" aria-hidden="true">4</span><span class="scale-word" aria-hidden="true">Occasional help</span></label>
+          <label class="scale-chip"><input type="radio" name="C3_DataTypes" value="5 — Could do independently and explain it" aria-label="5 — Could do independently and explain it" required><span class="scale-num" aria-hidden="true">5</span><span class="scale-word" aria-hidden="true">Independently</span></label>
+          </div>
+          <p class="error-msg" hidden></p>
+        </fieldset>
+      </div>
+
+      <!-- FROZEN +60-day battery item — do not reword. See docs/. -->
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">C4</span> Reading structured error messages or logs <span class="req" aria-hidden="true">*</span><span class="sr-only"> (required)</span></legend>
+          <div class="scale-options" data-req-group="C4_ErrorLogs">
+          <label class="scale-chip"><input type="radio" name="C4_ErrorLogs" value="1 — Never seen or done this" aria-label="1 — Never seen or done this" required><span class="scale-num" aria-hidden="true">1</span><span class="scale-word" aria-hidden="true">Never seen</span></label>
+          <label class="scale-chip"><input type="radio" name="C4_ErrorLogs" value="2 — Seen it, wouldn&#39;t attempt alone" aria-label="2 — Seen it, wouldn&#39;t attempt alone" required><span class="scale-num" aria-hidden="true">2</span><span class="scale-word" aria-hidden="true">Seen it</span></label>
+          <label class="scale-chip"><input type="radio" name="C4_ErrorLogs" value="3 — Could do with step-by-step guidance" aria-label="3 — Could do with step-by-step guidance" required><span class="scale-num" aria-hidden="true">3</span><span class="scale-word" aria-hidden="true">Step-by-step</span></label>
+          <label class="scale-chip"><input type="radio" name="C4_ErrorLogs" value="4 — Could do with occasional help" aria-label="4 — Could do with occasional help" required><span class="scale-num" aria-hidden="true">4</span><span class="scale-word" aria-hidden="true">Occasional help</span></label>
+          <label class="scale-chip"><input type="radio" name="C4_ErrorLogs" value="5 — Could do independently and explain it" aria-label="5 — Could do independently and explain it" required><span class="scale-num" aria-hidden="true">5</span><span class="scale-word" aria-hidden="true">Independently</span></label>
+          </div>
+          <p class="error-msg" hidden></p>
+        </fieldset>
+      </div>
+
+      <!-- FROZEN +60-day battery item — do not reword. See docs/. -->
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">C5</span> Moving files automatically between systems (SFTP) <span class="req" aria-hidden="true">*</span><span class="sr-only"> (required)</span></legend>
+          <div class="scale-options" data-req-group="C5_SFTP">
+          <label class="scale-chip"><input type="radio" name="C5_SFTP" value="1 — Never seen or done this" aria-label="1 — Never seen or done this" required><span class="scale-num" aria-hidden="true">1</span><span class="scale-word" aria-hidden="true">Never seen</span></label>
+          <label class="scale-chip"><input type="radio" name="C5_SFTP" value="2 — Seen it, wouldn&#39;t attempt alone" aria-label="2 — Seen it, wouldn&#39;t attempt alone" required><span class="scale-num" aria-hidden="true">2</span><span class="scale-word" aria-hidden="true">Seen it</span></label>
+          <label class="scale-chip"><input type="radio" name="C5_SFTP" value="3 — Could do with step-by-step guidance" aria-label="3 — Could do with step-by-step guidance" required><span class="scale-num" aria-hidden="true">3</span><span class="scale-word" aria-hidden="true">Step-by-step</span></label>
+          <label class="scale-chip"><input type="radio" name="C5_SFTP" value="4 — Could do with occasional help" aria-label="4 — Could do with occasional help" required><span class="scale-num" aria-hidden="true">4</span><span class="scale-word" aria-hidden="true">Occasional help</span></label>
+          <label class="scale-chip"><input type="radio" name="C5_SFTP" value="5 — Could do independently and explain it" aria-label="5 — Could do independently and explain it" required><span class="scale-num" aria-hidden="true">5</span><span class="scale-word" aria-hidden="true">Independently</span></label>
+          </div>
+          <p class="error-msg" hidden></p>
+        </fieldset>
+      </div>
+
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">C6</span> The idea of transforming data during load — e.g., reformatting dates or mapping old codes to new values in the system — rather than hand-editing the file <span class="req" aria-hidden="true">*</span><span class="sr-only"> (required)</span></legend>
+          <div class="scale-options" data-req-group="C6_Transforms">
+          <label class="scale-chip"><input type="radio" name="C6_Transforms" value="1 — Never seen or done this" aria-label="1 — Never seen or done this" required><span class="scale-num" aria-hidden="true">1</span><span class="scale-word" aria-hidden="true">Never seen</span></label>
+          <label class="scale-chip"><input type="radio" name="C6_Transforms" value="2 — Seen it, wouldn&#39;t attempt alone" aria-label="2 — Seen it, wouldn&#39;t attempt alone" required><span class="scale-num" aria-hidden="true">2</span><span class="scale-word" aria-hidden="true">Seen it</span></label>
+          <label class="scale-chip"><input type="radio" name="C6_Transforms" value="3 — Could do with step-by-step guidance" aria-label="3 — Could do with step-by-step guidance" required><span class="scale-num" aria-hidden="true">3</span><span class="scale-word" aria-hidden="true">Step-by-step</span></label>
+          <label class="scale-chip"><input type="radio" name="C6_Transforms" value="4 — Could do with occasional help" aria-label="4 — Could do with occasional help" required><span class="scale-num" aria-hidden="true">4</span><span class="scale-word" aria-hidden="true">Occasional help</span></label>
+          <label class="scale-chip"><input type="radio" name="C6_Transforms" value="5 — Could do independently and explain it" aria-label="5 — Could do independently and explain it" required><span class="scale-num" aria-hidden="true">5</span><span class="scale-word" aria-hidden="true">Independently</span></label>
+          </div>
+          <p class="error-msg" hidden></p>
+        </fieldset>
+      </div>
+
+      <!-- FROZEN +60-day battery item — do not reword. See docs/. -->
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">C7</span> General comfort learning new technical tools <span class="req" aria-hidden="true">*</span><span class="sr-only"> (required)</span></legend>
+          <div class="scale-options" data-req-group="C7_NewTools">
+          <label class="scale-chip"><input type="radio" name="C7_NewTools" value="1 — Never seen or done this" aria-label="1 — Never seen or done this" required><span class="scale-num" aria-hidden="true">1</span><span class="scale-word" aria-hidden="true">Never seen</span></label>
+          <label class="scale-chip"><input type="radio" name="C7_NewTools" value="2 — Seen it, wouldn&#39;t attempt alone" aria-label="2 — Seen it, wouldn&#39;t attempt alone" required><span class="scale-num" aria-hidden="true">2</span><span class="scale-word" aria-hidden="true">Seen it</span></label>
+          <label class="scale-chip"><input type="radio" name="C7_NewTools" value="3 — Could do with step-by-step guidance" aria-label="3 — Could do with step-by-step guidance" required><span class="scale-num" aria-hidden="true">3</span><span class="scale-word" aria-hidden="true">Step-by-step</span></label>
+          <label class="scale-chip"><input type="radio" name="C7_NewTools" value="4 — Could do with occasional help" aria-label="4 — Could do with occasional help" required><span class="scale-num" aria-hidden="true">4</span><span class="scale-word" aria-hidden="true">Occasional help</span></label>
+          <label class="scale-chip"><input type="radio" name="C7_NewTools" value="5 — Could do independently and explain it" aria-label="5 — Could do independently and explain it" required><span class="scale-num" aria-hidden="true">5</span><span class="scale-word" aria-hidden="true">Independently</span></label>
+          </div>
+          <p class="error-msg" hidden></p>
+        </fieldset>
+      </div>
+      </div>
+    </section>
+
+    <!-- ============ Section D ============ -->
+    <section aria-labelledby="sec-d">
+      <div class="section-head">
+        <span class="section-letter" aria-hidden="true">D</span>
+        <h2 id="sec-d">Confidence and goals</h2>
+      </div>
+      <p class="section-note"><span class="privacy-reminder">Reminder: individual answers go only to Abe.</span></p>
+
+      <div id="scale-d">
+      <!-- FROZEN +60-day battery item — do not reword. See docs/. -->
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">D1</span> How confident are you that you could complete a basic integration task — for example, set up a master-data upload or triage a failed file — today, with minimal help? <span class="req" aria-hidden="true">*</span><span class="sr-only"> (required)</span></legend>
+          <div class="scale-options" data-req-group="D1_ConfidenceToday">
+          <label class="scale-chip"><input type="radio" name="D1_ConfidenceToday" value="1 — Not at all confident" aria-label="1 — Not at all confident" required><span class="scale-num" aria-hidden="true">1</span><span class="scale-word" aria-hidden="true">Not at all</span></label>
+          <label class="scale-chip"><input type="radio" name="D1_ConfidenceToday" value="2 — Slightly confident" aria-label="2 — Slightly confident" required><span class="scale-num" aria-hidden="true">2</span><span class="scale-word" aria-hidden="true">Slightly</span></label>
+          <label class="scale-chip"><input type="radio" name="D1_ConfidenceToday" value="3 — Moderately confident" aria-label="3 — Moderately confident" required><span class="scale-num" aria-hidden="true">3</span><span class="scale-word" aria-hidden="true">Moderately</span></label>
+          <label class="scale-chip"><input type="radio" name="D1_ConfidenceToday" value="4 — Confident" aria-label="4 — Confident" required><span class="scale-num" aria-hidden="true">4</span><span class="scale-word" aria-hidden="true">Confident</span></label>
+          <label class="scale-chip"><input type="radio" name="D1_ConfidenceToday" value="5 — Completely confident" aria-label="5 — Completely confident" required><span class="scale-num" aria-hidden="true">5</span><span class="scale-word" aria-hidden="true">Completely</span></label>
+          </div>
+          <p class="error-msg" hidden></p>
+        </fieldset>
+      </div>
+      </div>
+
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">D2</span> Which parts of integration work look most challenging to you right now? <span class="optional-tag">Optional</span></legend>
+          <p class="hint">Nothing here is a commitment — it just tells Abe where to spend extra time.</p>
+          <textarea id="d2-challenging" name="D2_MostChallenging" rows="3" aria-label="Which parts of integration work look most challenging"></textarea>
+        </fieldset>
+      </div>
+
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">D3</span> Which of these would you most like to be able to do afterward? <span class="hint-inline">(select up to 3)</span> <span class="req" aria-hidden="true">*</span><span class="sr-only"> (required — select one to three)</span></legend>
+          <p class="sr-only" aria-live="polite" id="d3-live"></p>
+          <div class="choice-stack" data-req-group="D3_Goals" data-max="3" id="d3-group">
+            <label class="chip"><input type="checkbox" name="D3_Goals" value="Set up master data uploads"><span>Set up master data uploads</span></label>
+            <label class="chip"><input type="checkbox" name="D3_Goals" value="Fix file and data errors"><span>Fix file and data errors</span></label>
+            <label class="chip"><input type="checkbox" name="D3_Goals" value="Monitor runs and triage failures"><span>Monitor runs and triage failures</span></label>
+            <label class="chip"><input type="checkbox" name="D3_Goals" value="Configure standard downloads"><span>Configure standard downloads</span></label>
+            <label class="chip"><input type="checkbox" name="D3_Goals" value="Apply standard transforms during load"><span>Apply standard transforms during load</span></label>
+            <label class="chip"><input type="checkbox" name="D3_Goals" value="Scope integration work and hand off cleanly to IS"><span>Scope integration work and hand off cleanly to IS</span></label>
+          </div>
+          <div class="subfield">
+            <label class="sublabel" for="d3-top">Of those, which ONE matters most? <span class="req" aria-hidden="true">*</span></label>
+            <select id="d3-top" name="D3_TopGoal" required data-req>
+              <option value="">Choose one…</option>
+              <option>Set up master data uploads</option>
+              <option>Fix file and data errors</option>
+              <option>Monitor runs and triage failures</option>
+              <option>Configure standard downloads</option>
+              <option>Apply standard transforms during load</option>
+              <option>Scope integration work and hand off cleanly to IS</option>
+            </select>
+          </div>
+          <p class="error-msg" hidden></p>
+        </fieldset>
+      </div>
+
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">D4</span> Any accessibility needs we should build the sessions around? <span class="optional-tag">Optional</span></legend>
+          <p class="hint">This stays between you and Abe. If you'd rather share it one-to-one, <a href="mailto:idabbouseh@gmail.com?subject=FC%20training%20—%20one-to-one">email Abe directly</a> instead of typing it here.</p>
+          <textarea id="d4-access" name="D4_AccessibilityNeeds" rows="2" aria-label="Accessibility needs"></textarea>
+        </fieldset>
+      </div>
+
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">D5</span> Anything else about how you learn best — or anything else Abe should know? <span class="optional-tag">Optional</span></legend>
+          <textarea id="d5-else" name="D5_AnythingElse" rows="2" aria-label="Anything else Abe should know"></textarea>
+        </fieldset>
+      </div>
+    </section>
+
+    <!-- ============ Section E ============ -->
+    <section aria-labelledby="sec-e">
+      <div class="section-head">
+        <span class="section-letter" aria-hidden="true">E</span>
+        <h2 id="sec-e">Logistics</h2>
+      </div>
+      <p class="section-note">Abe will convert everything and find the overlap — the slot won't be perfect for anyone, so honest windows help more than polite ones.</p>
+
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">E1</span> Preferred session length <span class="req" aria-hidden="true">*</span></legend>
+          <div class="choice-row" data-req-group="E1_SessionLength">
+            <label class="chip"><input type="radio" name="E1_SessionLength" required value="60 min"><span>60 min</span></label>
+            <label class="chip"><input type="radio" name="E1_SessionLength" required value="90 min"><span>90 min</span></label>
+            <label class="chip"><input type="radio" name="E1_SessionLength" required value="120 min"><span>120 min</span></label>
+            <label class="chip"><input type="radio" name="E1_SessionLength" required value="No preference"><span>No preference</span></label>
+          </div>
+          <p class="error-msg" hidden></p>
+        </fieldset>
+      </div>
+
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">E2</span> Your time zone <span class="req" aria-hidden="true">*</span></legend>
+          <select id="e2-tz" name="E2_TimeZone" aria-label="Your time zone" required data-req>
+            <option value="">Choose your time zone…</option>
+            <optgroup label="United States">
+              <option>US Eastern (ET)</option>
+              <option>US Central (CT)</option>
+              <option>US Mountain (MT)</option>
+              <option>US Pacific (PT)</option>
+            </optgroup>
+            <optgroup label="EMEA">
+              <option>UK / Ireland (GMT/BST)</option>
+              <option>Central Europe (CET)</option>
+              <option>Eastern Europe (EET)</option>
+              <option>Gulf (GST)</option>
+            </optgroup>
+            <optgroup label="Latin America">
+              <option>Mexico (CT)</option>
+              <option>Colombia / Peru (COT)</option>
+              <option>Brazil (BRT)</option>
+              <option>Argentina / Chile (ART/CLT)</option>
+            </optgroup>
+            <option value="Other">Other</option>
+          </select>
+          <div class="field followup">
+            <label for="e2-other">Other time zone — which?</label>
+            <input type="text" id="e2-other" name="E2_TimeZone_Other">
+          </div>
+          <p class="error-msg" hidden></p>
+        </fieldset>
+      </div>
+
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">E3</span> Which weekdays generally work for live sessions? <span class="hint-inline">(select all that apply)</span> <span class="req" aria-hidden="true">*</span><span class="sr-only"> (required — select at least one)</span></legend>
+          <div class="choice-row" data-req-group="E3_Days">
+            <label class="chip"><input type="checkbox" name="E3_Days" value="Monday"><span>Monday</span></label>
+            <label class="chip"><input type="checkbox" name="E3_Days" value="Tuesday"><span>Tuesday</span></label>
+            <label class="chip"><input type="checkbox" name="E3_Days" value="Wednesday"><span>Wednesday</span></label>
+            <label class="chip"><input type="checkbox" name="E3_Days" value="Thursday"><span>Thursday</span></label>
+          </div>
+          <p class="error-msg" hidden></p>
+        </fieldset>
+      </div>
+
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">E4</span> Session start window — in YOUR local time <span class="req" aria-hidden="true">*</span></legend>
+          <p class="hint">The earliest and the latest a session could <strong>start</strong> and still work for you.</p>
+          <div class="field-row time-row">
+            <div class="field">
+              <label for="e4-earliest">Earliest start</label>
+              <input type="time" id="e4-earliest" name="E4_EarliestStart" required data-req>
+            </div>
+            <div class="field">
+              <label for="e4-latest">Latest start</label>
+              <input type="time" id="e4-latest" name="E4_LatestStart" required data-req>
+            </div>
+          </div>
+          <p class="error-msg" hidden></p>
+        </fieldset>
+      </div>
+
+      <div class="question" data-q>
+        <fieldset>
+          <legend><span class="qnum">E5</span> Any standing conflicts or scheduling constraints Abe should plan around? <span class="optional-tag">Optional</span></legend>
+          <textarea id="e5-constraints" name="E5_Constraints" rows="2" placeholder="e.g., client call every Tuesday 14:00–15:00 my time"></textarea>
+        </fieldset>
+      </div>
+    </section>
+
+    <div class="submit-area">
+      <button type="submit" id="submit-btn" class="submit-btn">Send my answers to Abe</button>
+      <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+      <p id="fallback-area" hidden>Submission isn't going through? <a id="mailto-fallback" href="mailto:idabbouseh@gmail.com">Email your answers to Abe instead</a> — the link opens a pre-filled email.</p>
+    </div>
+  </form>
+
+  <div id="confirmation" class="confirmation" hidden tabindex="-1">
+    <h2>Thanks<span id="confirm-name"></span> — your answers went to Abe.</h2>
+    <p>They'll shape how deep each session goes and when the cohort meets. You'll hear from Abe with the schedule once everyone's responses are in.</p>
+    <p>Thought of something later? Just <a href="mailto:idabbouseh@gmail.com?subject=FC%20questionnaire%20—%20one%20more%20thing">email Abe</a>.</p>
+  </div>
+
+  <footer class="page-foot">
+    <p>Responses go only to Abe and are used to shape the curriculum. Questions before filling this in? <a href="mailto:idabbouseh@gmail.com?subject=FC%20questionnaire%20question">Ask Abe</a> — early questions are exactly what shapes the sessions.</p>
+  </footer>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
