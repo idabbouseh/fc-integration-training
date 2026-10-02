@@ -51,3 +51,5 @@ Without the skill, the main misses were:
 With the skill, a triage took about 8 seconds longer.
 
 Two limits apply. The Joule side was tested against a mock of Joule's tools, not Joule Work Desktop itself. Each configuration ran once per round, so the numbers show direction rather than variance.
+
+`setup-fg-mail.ps1` parses cleanly and has no findings under PSScriptAnalyzer's compatibility rules for Windows PowerShell 5.1 and PowerShell 7. It was also dry-run end to end on Linux with Windows-like environment variables, which exercised a real `pip install` of the pinned package, a real `claude mcp add` and a real `claude mcp list`. It has not yet run on a Windows machine with Outlook, so the first real run is the final check.

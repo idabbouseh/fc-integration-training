@@ -34,7 +34,7 @@
 #>
 [CmdletBinding()]
 param(
-    [string]$WorkDir = (Join-Path $env:USERPROFILE 'fg-mail'),
+    [string]$WorkDir = '',
     [switch]$AskBeforeReading
 )
 
@@ -65,9 +65,10 @@ function Update-SessionPath {
 
 # ---------------------------------------------------------------- 0. preflight
 if ($env:OS -ne 'Windows_NT') {
-    Write-Host 'This script is for Windows. On a Mac, follow the manual runbook instead.' -ForegroundColor Red
+    Write-Host 'This script is for Windows only. On a Mac, import the skill into Joule Work Desktop instead (see RUNBOOK.md).' -ForegroundColor Red
     return
 }
+if (-not $WorkDir) { $WorkDir = Join-Path $env:USERPROFILE 'fg-mail' }
 if ($ExecutionContext.SessionState.LanguageMode -ne 'FullLanguage') {
     Write-Host 'PowerShell is in Constrained Language Mode on this machine, so this script cannot run.' -ForegroundColor Red
     Write-Host 'Follow the manual runbook (RUNBOOK.md) instead, or ask IT about running PowerShell scripts.' -ForegroundColor Red
@@ -183,7 +184,7 @@ if ($py) {
         $mcpReady = $true
         Add-Result 'Outlook MCP' 'OK' "$McpPackage installed for your user."
     } else {
-        Add-Result 'Outlook MCP' 'FAIL' "pip install or import failed. See $logFile. Common cause: a proxy blocking pypi.org."
+        Add-Result 'Outlook MCP' 'FAIL' "pip install or import failed. See $logFile. Common causes: a proxy blocking pypi.org, or a Python that refuses package installs (PEP 668)."
     }
 } else {
     Add-Result 'Outlook MCP' 'SKIP' 'Needs Python.'
