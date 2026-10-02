@@ -53,3 +53,9 @@ form), keep them identical, and drop everything else except the name field.
 
 Served by GitHub Pages from the `main` branch root of
 `idabbouseh/fc-integration-training`. Push to `main` to deploy.
+
+## Also in this repo
+
+`fg-mail/` holds a separate tool: a read-only Fieldglass mail triage skill for Joule Work
+Desktop and Claude Code, with a one-paste Windows setup. It is not part of the questionnaire
+form. See [`fg-mail/README.md`](fg-mail/README.md).
